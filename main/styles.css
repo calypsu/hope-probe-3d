@@ -1,0 +1,335 @@
+:root {
+    --link-color: #01AEBC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    overflow: hidden;
+    background: #000;
+    color: #999;
+}
+* {
+    outline: none !important;
+}
+a:link, a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.label {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    /* font-weight: bold; */
+    font-size: 14px;
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+}
+#bottom {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+}
+.bottom-div {
+    padding: 10px 0;
+}
+#bottom div {
+    color: #fff;
+}
+#loader {
+    position: absolute;
+    z-index: 200;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+}
+#info {
+    margin: 10px 20px;
+    /* pointer-events: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 20px);
+    z-index: 100;
+}
+#info span {
+    padding: 5px 10px;
+    color: #fff;
+}
+#info .head-span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+    white-space: nowrap;
+}
+.fl { float: left; }
+.fr { float: right; }
+.grid-5 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+.logo > img {
+    height: 80px;
+    width: auto;
+}
+.space-agency-logo {
+    height: 50px !important;
+}
+.home {
+    height: 40px;
+}
+.home img {
+    height: 40px;
+}
+.flex-basis-150 {
+    flex-basis: 65px;
+}
+
+#notice {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    margin-top: 5px;
+}
+.dib {
+    display: inline-block;
+}
+.justify-center {
+    justify-content: center;
+}
+
+.w-100w { width: 100vw; }
+.h-100h { height: 100vh; }
+
+#drop-down-details[show=false] .drop-down-item[show=false] {
+    display: none;
+}
+
+.drop-down-item {
+    float: left;
+}
+
+.drop-down-show {
+    padding: 0 10px;
+    float: unset;
+    padding-bottom: 10px;
+    background-color: rgba(255,255,255,0.2);
+    width: calc(100% - 20px);
+    backdrop-filter: blur(10px);
+}
+
+.drop-down-show:last-child {
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.more {
+    display: none;
+}
+
+#loading-percentage {
+    color: #c52b24;
+    font-weight: bold;
+}
+ 
+.image-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.image-card b {
+    padding: 0;
+    margin: 0;
+    height: 27px;
+}
+
+span.span-link {
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+span.span-link:hover {
+    text-decoration: underline;
+}
+
+.dark-button {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+#info-modal {
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1612px) {
+    #notice {
+        position: static;
+        font-size: 12px;
+    }
+
+    #drop-down-details[show=false] .drop-down-show {
+        display: none;
+    }
+    
+    .drop-down-show:first-child {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+    position: relative;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #c52b24;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
+​
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid #c52b24;
+    }
+    input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.6);
+    }
+
+select {
+    background: black;
+    border: black;
+    color: #fff;
+    padding: 3px 0.25rem;
+}
+
+#sim-speed button, .red-btn, .red-btn:link, .red-btn:visited {
+    margin: 0 5px;
+    background-color: #c52b24;
+    color: white;
+    padding: 3px 0.25rem;
+    text-decoration: none;
+    border: 0;
+}
+
+#timezone-change .red-btn, #timezone-change .red-btn:link, #timezone-change .red-btn:visited {
+    background: #222;
+    color: #ddd;
+    cursor: pointer;
+}
+
+ #timezone-change .red-btn.selected, #timezone-change .red-btn.selected:link, #timezone-change .red-btn.selected:visited {
+    background: #c52b24;
+    color: #fff;
+    cursor: default;
+}
+
+#switch-to-ar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.primary-button {
+    padding: 0.5rem 1rem;
+    background: black;
+    color: white;
+    box-shadow: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: white;
+    color: black;
+}
+
+@media only screen and (max-width: 1400px) {
+    #drop-down-details {
+        position: absolute;
+        top: 60px;
+        color: #fff;
+        font-weight: bold;
+        left: 0;
+        z-index: 150;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .more {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .logo > img {
+        height: 40px;
+    }
+    .space-agency-logo {
+        height: 30px !important;
+    }
+    .grid-1-mobile {
+        grid-template-columns: 1fr !important;
+    }
+    /* .flex-basis-150 {
+        flex-basis: 150px;
+    } */
+    #info {
+        pointer-events: all;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    #switch-to-ar {
+        top: 40px;
+        right: 20px;
+    }
+}
